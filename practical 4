@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+</head>
+<body bgcolor="lightyellow">
+    <h2 align="center" style="color:blue;">Student Information</h2>
+    <table border="1" align="center" cellpadding="8" cellspacing="0" bgcolor="white">
+        <tr bgcolor="lightblue">
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td>Spandan</td>
+            <td>B-tech</td>
+            <td>20</td>
+            <td>Nagpur</td>
+        </tr>
+        <tr bgcolor="lightgray">
+            <td>102</td>
+            <td>Rahul</td>
+            <td>BCA</td>
+            <td>21</td>
+            <td>Mumbai</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Anita</td>
+            <td>BCA</td>
+            <td>19</td>
+            <td>Pune</td>
+        </tr>
+    </table>
+</body>
+</html>
