@@ -1,0 +1,60 @@
+<html>
+<title>Practical-5</title>
+
+<body>
+
+<center>
+<h3>practical-5</h3>
+<h1>RESUME</h1>
+</center>
+
+<table width="100%">
+<tr>
+
+<td>
+Name - Spandan Pantawane <br>
+USN NO. - CS25119 <br>
+Email - spandanp.cse25@sbjit.edu.in
+</td>
+
+<td align="right">
+<img src="C:\Users\CCLab\Downloads\spandan.jpg"  height="150" width="120">
+</td>
+
+</tr>
+</table>
+
+<hr>
+
+<table width="100%">
+<tr>
+
+<td width="60%">
+
+<b>Educational Details:</b><br>
+University - SB Jain College <br>
+Department - CSE <br><br>
+
+<b>Technical Skills:</b><br>
+HTML, CSS, JavaScript, C++
+
+</td>
+
+<td width="40%" bgcolor="lightblue">
+
+<b>Personal Details</b><br><br>
+Name: Spandan D. Pantawane <br>
+Personal Email: spandanpantawane06@gmail.com <br>
+Mo.No: 7775864389
+
+</td>
+
+</tr>
+</table>
+
+<br>
+
+<b>Higher Education:</b>
+
+</body>
+</html>
