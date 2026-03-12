@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>MahaDBT Scholarship Form</title>
+</head>
+<body>
+
+    <h2>MahaDBT Scholarship Application</h2>
+
+    <form>
+        
+        <h3>Personal Information</h3>
+        
+        <label>First Name:</label>
+        <input type="text" name="firstname" placeholder="Enter First Name">
+
+        <label>Middle Name:</label>
+        <input type="text" name="middlename" placeholder="Enter Middle Name" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastname" placeholder="Enter Last Name" required><br><br>
+
+        <label>Email ID:</label>
+        <input type="email" name="email" placeholder="Enter Email ID" required><br><br>
+
+        <label>Mobile Number:</label>
+        <input type="number" name="mobile" placeholder="Enter Mobile Number" required><br><br>
+
+        <h3>Aadhaar Details</h3>
+        <label>Do you have Aadhaar Card?</label><br>
+        <input type="radio" name="aadhaar" value="yes"> Yes
+        <input type="radio" name="aadhaar" value="no"> No
+        <br><br>
+
+        <label>Aadhaar Number:</label>
+        <input type="text" name="aadhaarNumber" placeholder="Enter Aadhaar Number"><br>
+
+        <h3>Address Information</h3>
+        <label>Permanent Address:</label><br>
+        <textarea name="address" placeholder="Enter Permanent Address"></textarea><br>
+
+        <label>District:</label><br>
+        <input type="text" name="district" placeholder="Enter District"><br>
+
+        <h3>Educational & Category Details</h3>
+        <label>Caste Category:</label><br>
+        <select name="category" required>
+            <option value="">--Select--</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="OBC">OBC</option>
+            <option value="OPEN">OPEN / EBC</option>
+        </select><br><br>
+
+        <label>Annual Family Income (₹):</label><br>
+        <input type="number" name="income" placeholder="Enter Annual Income"><br><br>
+
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+    </form>
+
+</body>
+</html>
