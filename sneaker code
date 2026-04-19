@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- PAGE 1: PRODUCT SELECTION -->
+<div id="product-page">
+    <div class="product-gallery">
+        <img src="sneaker-main.jpg" alt="Nike Air Max 90" width="300" />
+        <div class="thumbnail-list">
+            <img src="sneaker-side.jpg" alt="Side view" width="50" />
+            <img src="sneaker-back.jpg" alt="Back view" width="50" />
+            <img src="sneaker-sole.jpg" alt="Sole view" width="50" />
+        </div>
+    </div>
+    <div class="product-details">
+        <h1>Nike Air Max 90</h1>
+        <p><strong>Price: $129.99</strong></p>
+        <fieldset>
+            <legend>Color</legend>
+            <label><input type="radio" name="color" value="white" checked /> White</label><br>
+            <label><input type="radio" name="color" value="black" /> Black</label><br>
+            <label><input type="radio" name="color" value="red" /> Red</label>
+        </fieldset>
+        <fieldset>
+            <legend>Size (US)</legend>
+            <label><input type="radio" name="size" value="7"> 7</label><br>
+            <label><input type="radio" name="size" value="8"> 8</label><br>
+            <label><input type="radio" name="size" value="9"> 9</label><br>
+            <label><input type="radio" name="size" value="10"> 10</label><br>
+            <label><input type="radio" name="size" value="11"> 11</label>
+        </fieldset>
+        <br>
+        <button id="add-to-cart" type="button">
+            Add to Cart — $129.99
+        </button>
+        <p>Status: In Stock - Ready to ship</p>
+    </div>
+</div>
+
+<!-- PAGE 2: SHIPPING DETAILS (Hidden by default) -->
+<div id="shipping-page" style="display:none;">
+    <h1>Shipping Address</h1>
+    <p>Please enter your details below:</p>
+    <form>
+        <label>Full Name:</label><br>
+        <input type="text" id="cust-name" placeholder="Enter your name"><br><br>
+        
+        <label>Shipping Address:</label><br>
+        <textarea id="address" rows="4" cols="40" placeholder="Street, City, Zip Code"></textarea><br><br>
+        
+        <button id="order-now" type="button">Order Now</button>
+    </form>
+</div>
+
+<!-- PAGE 3: FEEDBACK (Hidden by default) -->
+<div id="feedback-page" style="display:none;">
+    <h1>Thank You for Your Order!</h1>
+    <p>Your items are being processed.</p>
+    <hr>
+    <h3>Feedback</h3>
+    <p>How would you rate your experience today?</p>
+    <textarea id="feedback-text" rows="3" cols="40" placeholder="Your thoughts..."></textarea><br><br>
+    <button id="submit-feedback" type="button">Submit Feedback</button>
+</div>
+
+<script>
+    // Variables for each "page"
+    const productPage = document.getElementById('product-page');
+    const shippingPage = document.getElementById('shipping-page');
+    const feedbackPage = document.getElementById('feedback-page');
+
+    // 1. Add to Cart -> Open Shipping Page
+    document.getElementById('add-to-cart').onclick = function() {
+        productPage.style.display = 'none';
+        shippingPage.style.display = 'block';
+    };
+
+    // 2. Order Now -> Open Feedback Page
+    document.getElementById('order-now').onclick = function() {
+        const addressVal = document.getElementById('address').value;
+        if(addressVal.trim() === "") {
+            alert("Please provide a shipping address.");
+        } else {
+            shippingPage.style.display = 'none';
+            feedbackPage.style.display = 'block';
+        }
+    };
+
+    // 3. Final Step: Submit Feedback
+    document.getElementById('submit-feedback').onclick = function() {
+        alert("We appreciate your feedback! Have a great day.");
+        location.reload(); // Returns to the product page
+    };
+</script>
+
+</body>
+</html>
