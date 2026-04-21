@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Tribute to Mahatma Gandhi </title>
+</head>
+<body>
+
+<div>
+<nav>
+ <a href="#life">Life</a>
+ <a href="#works">Works</a>
+ <a href="#legacy">Legacy</a>
+</nav>
+</div>
+
+<div>
+<header>
+ <h1> Mahatma Gandhi </h1>
+ <p>The Father of the Nation</p>
+</header>
+</div>
+
+<div id="life">
+<h2>Life</h2>
+
+<img src="mahatma_gandhi.jpg">
+<p> Mohandas Karamchand Gandhi was the leader of India's non-violent independence movement against British rule and a world-renowned advocate for civil rights. </p>
+</div>
+
+<div id="works">
+<h2>Works</h2>
+<p><b>Satyagraha</b> - He pioneered the philosophy of non-violent resistance, leading famous movements like the Dandi Salt March to protest unfair British taxes.</p>
+<p><b>Social Reform</b> - He worked tirelessly to abolish the practice of untouchability and promoted communal harmony between different religious groups.</p>
+<p><b>Swadeshi Movement</b> - He encouraged Indians to boycott foreign goods and spin their own cloth (Khadi) to achieve economic self-reliance.</p>
+</div>
+
+<div id="legacy">
+<h2>Legacy</h2>
+<p>Gandhi's legacy of "Ahimsa" (non-violence) and "Truth" inspired leaders worldwide, including Martin Luther King Jr. and Nelson Mandela, in their fight for justice.</p>
+</div>
+
+</body>
+</html>
