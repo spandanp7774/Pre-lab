@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Daily Vibe Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>✨ How's the vibe?</h1>
+    <div class="controls">
+        <button onclick="getLocation()">Tag My Location</button>
+        <button class="reset" onclick="resetTracker()">Reset All</button>
+    </div>
+    <p id="city">Location not set</p>
+    <div id="options">
+        <div class="vibe" draggable="true" id="v1">🚀 High Energy</div>
+        <div class="vibe" draggable="true" id="v2">😴 Sleepy</div>
+        <div class="vibe" draggable="true" id="v3">🧘 Calm</div>
+    </div>
+    <h3>Current Mood:</h3>
+    <div id="dropZone" class="box">Drop vibe here</div>
+    <script>
+        const zone = document.getElementById('dropZone');
+        const optionsMenu = document.getElementById('options');
+        document.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('text', e.target.id);
+        });
+        zone.addEventListener('dragover', e => e.preventDefault());
+        zone.addEventListener('drop', e => {
+            e.preventDefault();
+            const id = e.dataTransfer.getData('text');
+            moveVibeToZone(id);
+        });
+        function moveVibeToZone(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                zone.innerHTML = '';
+                zone.appendChild(element);
+                localStorage.setItem('savedVibeId', id);
+            }
+        }
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(pos => {
+                const loc = `Lat: ${pos.coords.latitude.toFixed(2)}, Lon: ${pos.coords.longitude.toFixed(2)}`;
+                document.getElementById('city').innerText = loc;
+                localStorage.setItem('savedLocation', loc);
+            });
+        }
+        function resetTracker() {
+            localStorage.clear();
+            const vibes = document.querySelectorAll('.vibe');
+            vibes.forEach(vibe => optionsMenu.appendChild(vibe));
+            zone.innerText = "Drop vibe here";
+            document.getElementById('city').innerText = "Location not set";
+            alert("Storage cleared and vibes reset!");
+        }
+        window.onload = () => {
+            const lastId = localStorage.getItem('savedVibeId');
+            if (lastId) moveVibeToZone(lastId);
+            const lastLoc = localStorage.getItem('savedLocation');
+            if (lastLoc) document.getElementById('city').innerText = lastLoc;
+        };
+    </script>
+</body>
+</html>
